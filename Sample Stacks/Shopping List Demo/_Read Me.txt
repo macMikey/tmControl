@@ -1,0 +1,49 @@
+ABOUT THE MOBSHOPLIST DEMO
+
+This stack is offered as a "real world" example of tmControls deployed in a mobile app. Rather than showing a bunch of disconnected controls and simple scripts, the controls here are combined and synchronized to operate as a cohesive unit.  The app is by no means complete, but has enough capabilities to illustrate how it could be developed into a full-featured application.  
+
+Time was spent adjusting the UI and fine tuning performance to make for an effective user experience. Total time spent on the demo was roughly 4 days, which included iterating the UI several times and making adjustments to the underlaying behaviors of several controls.  The stack has run favorably on both the Xcode iPhone 5 simulator and several iPhone 5 devices.
+
+Important Note: To render the stack properly in Xcode using LiveCode 7, the standard iPhone 5 simulator must be used.  LiveCode 7 has a bug which prevents fonts from rendering correctly in all but the iPhone 5 and 4 simulators.  Font rendering on actual devices is not affected.
+
+While the stack can be run mostly in LiveCode, use of native controls such as fields can only be used in a simulator or an actual device. The app is not configured to actually save data, but can add and remove lists and list items internally while it is running.
+
+
+OPERATION & FEATURES TO LOOK FOR
+
+The initial list screen serves as a shopping list of items to be purchased. The app can contain multiple lists (it contains 2), and the current list name is displayed in the nav bar at the top.
+
+- Tap the list to edit an item's name, and add notes about the item.
+
+- Tap the quantity indicator of an item to increase or decrease the quantity.
+
+- Tap a check indicator at the far right to toggle it.
+
+- Tap the "Edit" button at the top left to remove items from a list.
+
+A toolbar offering extended features is displayed by tapping the icon in the upper right.  Functions include:
+- adding a new item to the current list
+- grouping/sorting checked items at the top of a list
+- sorting the entire list (tap again to change sort order)
+- resetting the quantites/checks of the current list
+
+Tapping the Manage Lists option in the tab bar at the bottom switches views to the list management screen, where lists can be added and deleted.
+
+
+CONSTRUCTION
+
+LiveCode offers multiple ways to structure apps and code can be placed in most any object. However, the approach taken here was to use the absolute minimum scripts in input objects such as buttons, fields and lists, and to place the bulk of code in card scripts.  This arrangement makes for an efficient separation of controls and logic, and will avoid the unintended loss of code that can occur if a control is mistakenly deleted. Editing scripts is also more efficient since once is a control is scripted with its minimum code, it no longer needs to be touched as all script edits take place in the card or stack script.
+
+
+ISSUES ADDRESSED
+
+You'll note that this demo utilizes simple animations in several situations, but the contents of native controls are rendered only when animations are completed. This is a design choice since animating a native control while simultaneously animating the underlying group objects is likely to be problematic.
+
+In many cases, the display of data or a control is preceded with a short delay to allow controls to draw/populate, and in some cases to provide feedback. A conscious attempt was made to avoid "hard cuts" (abrupt visual changes) used when revealing controls or switching views. Animation and movement help inform the user about what they have pressed and where they are being taken, and while this looks simple on the surface, it takes some effort synchronize all the actions well.  See the card scripts for details.
+
+One gratuitous animation sequence can be seen in the main list view by extending the toolbar and item editor field, tapping the Edit button to reveal the delete buttons, and then tapping the Manage Lists option in the tab bar.  The navigation script will collapse each open editor sequentially before navigating to the Lists card, and will take a bit of time doing so.  While this sequence is not terribly necessary, I chose to leave it in for novelty reasons.
+
+
+TAKE THE BALL AND RUN
+
+I hope you find this stack a useful example of what can be built with tmControl, and that it inspires you to build your own successful apps.  Please share your creations with Tactile Media!
