@@ -1,3 +1,13 @@
+# tmControl
+
+tmControl2 ~~is~~ was a [product from Tactile Media (download original here)](https://tmtools.tactilemedia.com) which has since been open-sourced under the BSD license.
+
+It is an interface design and theming tool for [LiveCode](https://www.livecode.com)
+
+
+
+## Original Blurb
+
 Copyright 2014 - 2022 Tactile Media
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
