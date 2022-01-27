@@ -6,6 +6,18 @@ It is an interface design and theming tool for [LiveCode](https://www.livecode.c
 
 
 
+## Version History
+
+### 2.3.0 2022.01.26
+
+* Improve blocking and snapping to keep the palette on a screen, support multiple screens.
+* Fix header appearance
+* tm_Control_Editor updated to 2.1.0 
+  * Include the improved blocking and snapping behavior
+  * Include the header fix
+
+ 
+
 ## Original Blurb
 
 Copyright 2014 - 2022 Tactile Media
